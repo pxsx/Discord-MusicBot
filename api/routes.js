@@ -63,8 +63,13 @@ api.get("/api/commands", (req, res) => {
 });
 
 api.get("/logout", (req, res) => {
-  if (req.user) req.logout();
-  res.redirect("/");
+  if (req.user) {
+    req.logout(() => {
+      res.redirect("/");
+    });
+  } else {
+    res.redirect("/");
+  }
 });
 
 module.exports = api;
