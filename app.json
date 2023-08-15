@@ -1,0 +1,51 @@
+{
+  "name": "Discord-MusicBot",
+  "description": "Very simple discord music bot with the discord.js with Song Name playing. It can able to play music with the song name",
+  "repository": "https://github.com/Pxsx/Discord-MusicBot",
+  "logo": "https://cdn.discordapp.com/avatars/971788346072399932/a_a0bf52e1e8d5766350e7834c2ad20e2b?size=1024",
+  "keywords": [
+    "node",
+    "discord",
+    "youtube",
+    "music",
+    "bot",
+    "lavalink",
+    "dashboard"
+  ],
+  "image": "heroku/nodejs",
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "env": {
+    "Prefix": {
+      "description": "The Discord Bot Prefix",
+      "required": "true"
+    },
+    "Token": {
+      "description": "The Discord Bot Token (https://discord.com/developers/applications)",
+      "required": "true"
+    },
+    "Discord_ClientID": {
+      "description": "The Discord Bot ClientID",
+      "required": "true"
+    },
+    "Discord_ClientSecret": {
+      "description": "The Discord Bot ClientSecret",
+      "required": "true"
+    },
+    "Website": {
+      "description": "URL of your webserver (Example: https://domain.xyz). Change this if you want to use the web-dashboard.",
+      "value": "http://localhost"
+    },
+    "Spotify_ClientID": {
+      "description": "Spotify ClientID. This is used if you want to use Spotify features for your bot. (https://developer.spotify.com/dashboard/)",
+      "required": "true"
+    },
+    "Spotify_ClientSecret": {
+      "description": "Spotify ClientSecret. This is used if you want to use Spotify features for your bot. (https://developer.spotify.com/dashboard/)",
+      "required": "true"
+    }
+  }
+}
